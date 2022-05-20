@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - botwsrnotes.furyrta.github.io</title>
+    <meta name="description" content="This is where I post all of my speedrun notes!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://botwsrnotes.furyrta.github.io/" />
+    <meta property="og:title" content="BOTWSRNotes.FuryRTA.github.io" />
+    <meta property="og:image" content="https://botwsrnotes.furyrta.github.io/furyrta_logo.png" />
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="texture"></div>
+    <div class="terra"><p id="txt">This is my cat!<br>Her name is Terra!</p><img src="terra.png" onclick="show_cat()" /></div>
+
+    <div id="main">
+        <a href='https://www.youtube.com/channel/UCW48XkukjQ20PqKD4w6wavQ'   class="icon-wrapper" target="_blank"><img src="resources/youtube.png" class="icon" /></a>
+        <a href='https://twitch.tv/FuryRTA'   class="icon-wrapper" target="_blank"><img src="resources/twitch.png" class="icon" /></a>
+        <a href='https://github.com/FuryRTA'   class="icon-wrapper" target="_blank"><img src="resources/github.png" class="icon" /></a>
+        <a href='https://www.speedrun.com/user/FuryRTA'   class="icon-wrapper" target="_blank"><img src="resources/src.png" class="icon" /></a>
+        <div id="inner">
+            <h1><span class='big1'>My BOTW Speedrun Notes&nbsp;</span></h1>
+            <p>I can't guarantee that they'll be all that useful.</p>
+		    <hr />
+            <p>Notes</p>
+            <a href='https://botwsrnotes.furyrta.github.io'><div class="widget">
+                <img src="https://botwsrnotes.furyrta.github.io/furyrta_logo.png" />
+                <span>Any% (amiibo, 6aa) Notes</span>
+            </div></a>
+      
+            <hr />
+            <script>
+                let NUMBER_OF_IMAGES = 15;
+                window.onload = () => {
+                    let img_url = `url("https://furyrta.github.io/background_images/${(Math.floor(Math.random()*NUMBER_OF_IMAGES) + 1)}.png") no-repeat`;
+                    let bg = document.querySelector('#background');
+                    bg.style.background = img_url;
+                    bg.style.backgroundSize = 'cover';
+		
+			
+                }
+                let show_cat = _ => {
+                    document.querySelector('#txt').style.visibility = 'visible';
+                }
+            
+            document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
+            
+            </script>
+        </div>
+    </div>  
+</body>  
+</html>
